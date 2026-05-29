@@ -1,0 +1,14 @@
+{
+	"extends": "@blgc/config/typescript/react-internal",
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"declarationDir": "./dist/types",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"target": "ES2022",
+		"lib": ["ES2022", "DOM", "DOM.Iterable"]
+	},
+	"include": ["src"]
+}

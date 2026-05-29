@@ -1,0 +1,43 @@
+{
+	"name": "focuscat",
+	"private": true,
+	"description": "",
+	"keywords": [],
+	"homepage": "https://focuscat.app/?utm_source=github",
+	"bugs": {
+		"url": "https://github.com/builder-group/focuscat/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/builder-group/focuscat.git"
+	},
+	"license": "AGPL-3.0-or-later",
+	"author": "@bennobuilder",
+	"scripts": {
+		"build": "turbo run build",
+		"clean": "turbo run clean --force && shx rm -rf .turbo && shx rm -rf .vercel && shx rm -rf node_modules",
+		"format": "prettier --write \"**/*.{ts,tsx,md,json,js,jsx}\"",
+		"install:clean": "pnpm clean && pnpm install && pnpm build",
+		"lint": "turbo run lint",
+		"start:dev": "turbo run start:dev",
+		"test": "turbo run test",
+		"update:latest": "turbo run update:latest --force && pnpm update --latest '!eslint' '!@eslint/js' && pnpm build"
+	},
+	"devDependencies": {
+		"@blgc/config": "^0.0.40",
+		"@eslint/js": "^9.39.2",
+		"eslint": "^9.39.2",
+		"prettier": "^3.8.1",
+		"rollup": "^4.60.1",
+		"rollup-presets": "^0.0.26",
+		"shx": "^0.4.0",
+		"turbo": "^2.8.21",
+		"typescript": "6.0.2",
+		"vite": "^8.0.3",
+		"vitest": "^4.1.2"
+	},
+	"packageManager": "pnpm@10.33.0",
+	"engines": {
+		"node": ">=24"
+	}
+}
